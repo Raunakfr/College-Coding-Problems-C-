@@ -75,6 +75,9 @@ int main(){
         /*case 4:
             strcmp();
             break;*/
+        default:
+            printf("Invalid input, please enter a valid input(1-4)!!");
+            break;
     }
     return 0;
 }
