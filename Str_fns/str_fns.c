@@ -65,18 +65,24 @@ char strcpyy(){
 }
 
 char strcmpp(){
+    int i = 0;
     char str1[1000] = {'\0'};
     char str2[1000] = {'\0'};
     printf("Enter the first string: ");
     getchar();
     fgets(str1, 1000, stdin);
+    str1[strlen(str1)-1] ='\0';
     printf("Enter the second string to be compared with the first string: ");
     fgets(str2, 1000, stdin);
-    /*int ascii1 = str1[];
-    int ascii2 = str2[];
-    printf("The ascii value of %s is %d", ascii1, ascii1);
-    printf("The ascii value of %s is %d", ascii2, ascii2);*/
-
+    str2[strlen(str2)-1] = '\0';
+    if(strlen(str1)<strlen(str2)){
+        printf("The first string is smaller than the second string");
+        printf("Returning a negative value!");
+    }
+    else if(strlen(str1)>strlen(str2)){
+        printf("The first string is larger than the second string");
+        printf("Returning a positive value!");
+    }
 }
 
 int main(){
